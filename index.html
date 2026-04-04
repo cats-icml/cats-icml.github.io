@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continual Adaptation at Scale — ICML 2026 Workshop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="navbar">
+    <div class="nav-container">
+        <a href="#" class="nav-logo">CATS Workshop</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#call-for-papers">Call for Papers</a></li>
+            <li><a href="#organizers">Organizers</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+    <div class="container">
+        <p class="hero-venue">ICML 2026 Workshop</p>
+        <h1>Continual Adaptation at Scale:<br>Towards Sustainable AI</h1>
+        <p class="hero-details">Hybrid Event &middot; Date TBA</p>
+    </div>
+</header>
+
+<!-- About -->
+<section id="about" class="section">
+    <div class="container">
+        <h2>About</h2>
+        <p>
+            Training foundation models is currently so costly that only few can afford it.
+            The immense data, compute, and energy demands are increasingly unsustainable.
+            Continual adaptation offers a viable alternative, where AI models can learn quickly
+            and continually through every day interactions, just like humans and animals.
+        </p>
+        <p>
+            Unfortunately, foundation models lack this rapid adaptability: new behavior can be induced by
+            prompting or fine-tuning, but there are no easy ways to quickly shape the behavior
+            &mdash; for instance, to permanently add, remove, or modify their skill set in a
+            sustainable way. <strong>This workshop aims to discuss new research directions that
+            will enable fast continual adaptation at scale to drive more sustainable AI.</strong>
+        </p>
+
+        <h3>Key Research Directions</h3>
+        <ul class="simple-list">
+            <li><strong>Scale &amp; Efficiency:</strong> The immense scale of foundation models makes traditional continual learning methods infeasible. This reshapes core questions about where plasticity should reside: must we update weights, modify architectures, or rely purely on in-context learning&mdash;and which approaches, alone or combined, are sufficient?</li>
+            <li><strong>Lifecycle &amp; Alignment:</strong> Foundation models undergo a hierarchical lifecycle of pre-training, instruction tuning, and alignment. We should determine if alignment and knowledge can be disentangled, or if the alignment tax is an inevitable cost of continual adaptation.</li>
+            <li><strong>Multimodality:</strong> Foundation models are inherently multimodal, introducing additional challenges like cross-modal drift, where updating vision encoders can degrade language reasoning which can then require a rigorous re-evaluation of how we measure forward and backward transfer.</li>
+            <li><strong>Deliberate Forgetting:</strong> While traditional continual learning focuses on knowledge accumulation, foundation models also require selective data removal for privacy, safety, or updating facts. This necessitates a new framework that treats intentional forgetting as a primary objective rather than merely avoiding catastrophic interference.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Speakers -->
+<section id="speakers" class="section section-alt">
+    <div class="container">
+        <h2 class="section-title-center">Invited Speakers</h2>
+        <div class="speakers-grid">
+            <div class="speaker-card">
+                <a href="https://www.razp.info" target="_blank" rel="noopener"><img class="speaker-photo" src="images/razvan_pascanu.jpg" alt="Razvan Pascanu"></a>
+                <h4><a href="https://www.razp.info" target="_blank" rel="noopener">Razvan Pascanu</a></h4>
+                <p class="speaker-affiliation">Google DeepMind / MILA</p>
+            </div>
+            <div class="speaker-card">
+                <a href="https://www.sarahooker.me/" target="_blank" rel="noopener"><img class="speaker-photo" src="images/sara_hooker.jpg" alt="Sara Hooker"></a>
+                <h4><a href="https://www.sarahooker.me/" target="_blank" rel="noopener">Sara Hooker</a></h4>
+                <p class="speaker-affiliation">Adaption</p>
+            </div>
+            <div class="speaker-card">
+                <a href="https://www.cs.uic.edu/~liub/" target="_blank" rel="noopener"><img class="speaker-photo" src="images/bing_liu.jpg" alt="Bing Liu"></a>
+                <h4><a href="https://www.cs.uic.edu/~liub/" target="_blank" rel="noopener">Bing Liu</a></h4>
+                <p class="speaker-affiliation">University of Illinois at Chicago</p>
+            </div>
+            <div class="speaker-card">
+                <a href="https://kempnerinstitute.harvard.edu/people/stephanie-chan/" target="_blank" rel="noopener"><img class="speaker-photo" src="images/stephanie_chan.jpg" alt="Stephanie Chan"></a>
+                <h4><a href="https://kempnerinstitute.harvard.edu/people/stephanie-chan/" target="_blank" rel="noopener">Stephanie Chan</a></h4>
+                <p class="speaker-affiliation">Google DeepMind</p>
+            </div>
+            <div class="speaker-card">
+                <a href="https://colinraffel.com/" target="_blank" rel="noopener"><img class="speaker-photo" src="images/colin_raffel.jpg" alt="Colin Raffel"></a>
+                <h4><a href="https://colinraffel.com/" target="_blank" rel="noopener">Colin Raffel</a></h4>
+                <p class="speaker-affiliation">University of Toronto / Vector Institute / Hugging Face</p>
+            </div>
+            <div class="speaker-card">
+                <a href="https://jaehong31.github.io/" target="_blank" rel="noopener"><img class="speaker-photo" src="images/jaehong_yoon.png" alt="Jaehong Yoon"></a>
+                <h4><a href="https://jaehong31.github.io/" target="_blank" rel="noopener">Jaehong Yoon</a></h4>
+                <p class="speaker-affiliation">Nanyang Technological University</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Schedule -->
+<section id="schedule" class="section">
+    <div class="container">
+        <h2>Schedule</h2>
+        <p class="section-note">All times are local to the venue.</p>
+        <div class="schedule-table-wrapper">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Type</th>
+                        <th>Activity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08:00 &ndash; 08:10</td>
+                        <td><span class="badge badge-misc">Opening</span></td>
+                        <td>Opening Remarks</td>
+                    </tr>
+                    <tr>
+                        <td>08:10 &ndash; 08:50</td>
+                        <td><span class="badge badge-invited">Invited Talk</span></td>
+                        <td>Razvan Pascanu</td>
+                    </tr>
+                    <tr>
+                        <td>08:50 &ndash; 09:35</td>
+                        <td><span class="badge badge-contributed">Oral Session</span></td>
+                        <td>Oral Session 1</td>
+                    </tr>
+                    <tr>
+                        <td>09:35 &ndash; 10:15</td>
+                        <td><span class="badge badge-invited">Invited Talk</span></td>
+                        <td>Colin Raffel</td>
+                    </tr>
+                    <tr class="schedule-break">
+                        <td>10:15 &ndash; 11:00</td>
+                        <td><span class="badge badge-break">Break</span></td>
+                        <td>Poster Session 1 &amp; Coffee</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 &ndash; 11:40</td>
+                        <td><span class="badge badge-invited">Invited Talk</span></td>
+                        <td>Sara Hooker</td>
+                    </tr>
+                    <tr>
+                        <td>11:40 &ndash; 12:20</td>
+                        <td><span class="badge badge-invited">Invited Talk</span></td>
+                        <td>Jaehong Yoon</td>
+                    </tr>
+                    <tr class="schedule-break">
+                        <td>12:20 &ndash; 13:30</td>
+                        <td><span class="badge badge-break">Break</span></td>
+                        <td>Lunch Break</td>
+                    </tr>
+                    <tr>
+                        <td>13:30 &ndash; 14:10</td>
+                        <td><span class="badge badge-invited">Invited Talk</span></td>
+                        <td>Bing Liu</td>
+                    </tr>
+                    <tr>
+                        <td>14:10 &ndash; 14:55</td>
+                        <td><span class="badge badge-contributed">Oral Session</span></td>
+                        <td>Oral Session 2</td>
+                    </tr>
+                    <tr class="schedule-break">
+                        <td>14:55 &ndash; 15:40</td>
+                        <td><span class="badge badge-break">Break</span></td>
+                        <td>Poster Session 2 &amp; Coffee</td>
+                    </tr>
+                    <tr>
+                        <td>15:40 &ndash; 16:20</td>
+                        <td><span class="badge badge-invited">Invited Talk</span></td>
+                        <td>Stephanie Chan</td>
+                    </tr>
+                    <tr>
+                        <td>16:20 &ndash; 16:30</td>
+                        <td><span class="badge badge-misc">Awards</span></td>
+                        <td>Best Paper Awards</td>
+                    </tr>
+                    <tr>
+                        <td>16:30 &ndash; 17:00</td>
+                        <td><span class="badge badge-misc">Panel</span></td>
+                        <td>Speaker Panel</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Call for Papers -->
+<section id="call-for-papers" class="section section-alt">
+    <div class="container">
+        <h2>Call for Papers</h2>
+        <p>We invite submissions on the following topics:</p>
+        <ul class="topic-list">
+            <li>
+                <strong>Frameworks for Adaptation:</strong> Reframing Post-Training and Alignment
+                (SFT/RLHF) as continual adaptation to mitigate vulnerabilities from distribution
+                shifts (e.g., alignment drift), and tailoring strategies to each lifecycle phase.
+            </li>
+            <li>
+                <strong>Mechanisms of Adaptation:</strong> Analyzing parametric (PEFT),
+                non-parametric (RAG), and semi-parametric (ICL) methods to design modular
+                architectures optimized for low-cost adaptation.
+            </li>
+            <li>
+                <strong>Theoretical Foundations of Adaptation:</strong> Understanding the
+                fine-tuning optimization landscape and how concepts are stored and modified
+                in high-dimensional space.
+            </li>
+            <li>
+                <strong>Evaluation &amp; Benchmarks for Adaptation:</strong> Moving beyond
+                Class-Incremental Learning to realistic scenarios (temporal news shifts,
+                evolving code, agent workflows) and establishing metrics for efficiency,
+                alignment retention, and targeted removal.
+            </li>
+        </ul>
+
+        <h3>Important Dates</h3>
+        <ul class="simple-list">
+            <li><strong>Submission Deadline:</strong> TBA</li>
+            <li><strong>Notification of Acceptance:</strong> TBA</li>
+            <li><strong>Camera-Ready Deadline:</strong> TBA</li>
+            <li><strong>Workshop Date:</strong> TBA</li>
+        </ul>
+
+        <h3>Submission Guidelines</h3>
+        <p>
+            Details on submission format, page limits, and the submission portal will be
+            announced soon. Please check back for updates.
+        </p>
+    </div>
+</section>
+
+<!-- Organizers -->
+<section id="organizers" class="section">
+    <div class="container">
+        <h2 class="section-title-center">Organizers</h2>
+        <div class="organizers-grid">
+            <div class="organizer-card">
+                <a href="https://scholar.google.com/citations?user=0e6fdZsAAAAJ&hl=en" target="_blank" rel="noopener"><img class="organizer-photo" src="images/ghada_sokar.jpg" alt="Ghada Sokar"></a>
+                <h4><a href="https://scholar.google.com/citations?user=0e6fdZsAAAAJ&hl=en" target="_blank" rel="noopener">Ghada Sokar</a></h4>
+                <p class="organizer-affiliation">Google DeepMind</p>
+            </div>
+            <div class="organizer-card">
+                <a href="https://gkdz.org" target="_blank" rel="noopener"><img class="organizer-photo" src="images/gintare_dziugaite.jpg" alt="Gintare Karolina Dziugaite"></a>
+                <h4><a href="https://gkdz.org" target="_blank" rel="noopener">Gintare Karolina Dziugaite</a></h4>
+                <p class="organizer-affiliation">Google DeepMind</p>
+            </div>
+            <div class="organizer-card">
+                <a href="https://emtiyaz.github.io/" target="_blank" rel="noopener"><img class="organizer-photo" src="images/emtiyaz_khan.jpg" alt="Emtiyaz Khan"></a>
+                <h4><a href="https://emtiyaz.github.io/" target="_blank" rel="noopener">Emtiyaz Khan</a></h4>
+                <p class="organizer-affiliation">RIKEN-AIP</p>
+            </div>
+            <div class="organizer-card">
+                <a href="https://armahmood.github.io/" target="_blank" rel="noopener"><img class="organizer-photo" src="images/rupam_mahmood.jpg" alt="Rupam Mahmood"></a>
+                <h4><a href="https://armahmood.github.io/" target="_blank" rel="noopener">Rupam Mahmood</a></h4>
+                <p class="organizer-affiliation">University of Alberta</p>
+            </div>
+            <div class="organizer-card">
+                <a href="https://owl-ml.uni-bremen.de" target="_blank" rel="noopener"><img class="organizer-photo" src="images/martin_mundt.jpg" alt="Martin Mundt"></a>
+                <h4><a href="https://owl-ml.uni-bremen.de" target="_blank" rel="noopener">Martin Mundt</a></h4>
+                <p class="organizer-affiliation">University of Bremen</p>
+            </div>
+            <div class="organizer-card">
+                <a href="https://scholar.google.com/citations?user=Vs4kBzQAAAAJ&hl=en" target="_blank" rel="noopener"><img class="organizer-photo" src="images/daniel_marczak.jpg" alt="Daniel Marczak"></a>
+                <h4><a href="https://scholar.google.com/citations?user=Vs4kBzQAAAAJ&hl=en" target="_blank" rel="noopener">Daniel Marczak</a></h4>
+                <p class="organizer-affiliation">Warsaw University of Technology</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>Continual Adaptation at Scale: Towards Sustainable AI &mdash; ICML 2026 Workshop</p>
+        <p class="footer-contact">
+            Contact: <a href="mailto:gsokar@google.com">gsokar@google.com</a> &middot;
+            <a href="mailto:gkdz@google.com">gkdz@google.com</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
