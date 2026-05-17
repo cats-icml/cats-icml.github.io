@@ -233,10 +233,15 @@ img {
 
 /* ===== Speakers Grid ===== */
 .speakers-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 32px;
     margin-top: 8px;
+}
+
+.speaker-card {
+    width: calc(33.333% - 22px);
 }
 
 .speaker-card {
