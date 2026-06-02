@@ -242,6 +242,16 @@ img {
 
 .speaker-card {
     width: calc(33.333% - 22px);
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 20px 12px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.speaker-card:hover {
+    border-color: var(--color-border);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .speaker-card {
@@ -282,6 +292,65 @@ img {
     margin-bottom: 0;
 }
 
+/* Expand hint */
+.speaker-expand-hint {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    letter-spacing: 0.02em;
+}
+
+.expand-arrow {
+    display: inline-block;
+    transition: transform 0.25s;
+    font-size: 0.7rem;
+}
+
+.speaker-card.expanded .expand-arrow {
+    transform: rotate(180deg);
+}
+
+/* Speaker details panel */
+.speaker-details {
+    display: none;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--color-border);
+    text-align: justify;
+}
+
+.speaker-card.expanded .speaker-details {
+    display: block;
+}
+
+.talk-title {
+    font-weight: 600;
+    color: var(--color-text);
+    font-size: 0.92rem;
+    margin-bottom: 8px;
+}
+
+.talk-abstract {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0;
+}
+
+.details-divider {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 12px 0;
+}
+
+.speaker-bio {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 0;
+}
+
 /* ===== Schedule Table ===== */
 .schedule-table-wrapper {
     overflow-x: auto;
@@ -319,6 +388,28 @@ img {
 
 .schedule-break {
     background: var(--color-bg-alt);
+}
+
+.schedule-talk {
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.schedule-talk:hover {
+    background: var(--color-bg-alt);
+}
+
+.schedule-abstract {
+    display: none;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.schedule-talk.expanded .schedule-abstract {
+    display: block;
 }
 
 /* Badges */
