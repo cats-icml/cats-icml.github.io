@@ -412,6 +412,30 @@ img {
     display: block;
 }
 
+.oral-paper {
+    display: flex;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.oral-paper:last-child {
+    border-bottom: none;
+}
+
+.oral-time {
+    font-size: 0.82rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    min-width: 40px;
+}
+
+.oral-authors {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+}
+
 /* Badges */
 .badge {
     display: inline-block;
