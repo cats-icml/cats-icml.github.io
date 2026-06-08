@@ -351,6 +351,52 @@ img {
     margin-bottom: 0;
 }
 
+/* ===== Accepted Papers Link ===== */
+.papers-link {
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.papers-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== Compact Hero (subpages) ===== */
+.hero-compact {
+    padding: 80px 0 32px;
+}
+
+.hero-compact h1 {
+    font-size: 1.75rem;
+}
+
+/* ===== Paper List ===== */
+.paper-list {
+    list-style: none;
+    padding: 0;
+}
+
+.paper-item {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.paper-item:last-child {
+    border-bottom: none;
+}
+
+.paper-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.paper-authors {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0;
+}
+
 /* ===== Schedule Table ===== */
 .schedule-table-wrapper {
     overflow-x: auto;
