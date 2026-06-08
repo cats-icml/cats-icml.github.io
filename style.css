@@ -626,6 +626,14 @@ img {
     margin: 0 auto;
 }
 
+/* ===== Reviewers ===== */
+.reviewer-list {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-top: 12px;
+}
+
 /* ===== Footer ===== */
 .footer {
     background: var(--color-hero-bg);
