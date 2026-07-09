@@ -684,6 +684,12 @@ img {
         gap: 24px;
     }
 
+    /* .speakers-grid is a flex container, so grid-template-columns
+       above has no effect on it — set the card width directly */
+    .speaker-card {
+        width: calc(50% - 12px);
+    }
+
     .nav-toggle {
         display: block;
     }
@@ -704,11 +710,73 @@ img {
     .nav-links.open {
         display: flex;
     }
+
+    /* Justified text creates ugly rivers on narrow screens */
+    body,
+    .speaker-details,
+    .schedule-abstract {
+        text-align: left;
+    }
+
+    /* Stack the schedule table into full-width cards so expanded
+       abstracts get the whole screen width instead of a tiny column */
+    .schedule-table-wrapper {
+        overflow-x: visible;
+    }
+
+    .schedule-table thead {
+        display: none;
+    }
+
+    .schedule-table,
+    .schedule-table tbody,
+    .schedule-table tr,
+    .schedule-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .schedule-table tr {
+        padding: 14px 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .schedule-table td {
+        padding: 0;
+        border-bottom: none;
+    }
+
+    .schedule-table td:first-child {
+        width: auto;
+        white-space: normal;
+        font-weight: 600;
+        color: var(--color-text);
+        margin-bottom: 6px;
+    }
+
+    .schedule-table td:nth-child(2) {
+        margin-bottom: 8px;
+    }
+
+    .schedule-break {
+        border-radius: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .oral-paper {
+        flex-direction: column;
+        gap: 2px;
+    }
 }
 
 @media (max-width: 480px) {
     .speakers-grid,
     .organizers-grid {
         grid-template-columns: 1fr;
+    }
+
+    .speaker-card {
+        width: 100%;
     }
 }
